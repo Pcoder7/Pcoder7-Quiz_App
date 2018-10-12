@@ -17,8 +17,8 @@ extract($_POST);
 
 if(isset($submit))
 {
-	$rs=mysql_query("select * from mst_user where login='$loginid' and pass='$pass'");
-	if(mysql_num_rows($rs)<1)
+	$rs=mysqli_query($con,"select * from mst_user where login='$loginid' and pass='$pass'");
+	if(mysqli_num_rows($rs)<1)
 	{
 		$found="N";
 	}
